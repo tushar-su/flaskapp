@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Explore!</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>     
+<center>
+<section class="section">
+<div class="container">
+<h1 class="title">Astronomy Picture of the Day </h1> <br/>
+<p class="subtitle"> <strong>Explore the Cosmos! </strong>Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.</p>
+{% if media == 'image' %}
+<img src ={{url}} class="img-fluid" alt="Responsive image">
+{% elif media == 'video' %}
+<iframe src ={{url}} allowfullscreen></iframe>
+{% else %} <h3> Media Type Not Supported Yet</h3>
+{% endif %} 
+<h4 class="title"> 
+<b> {{title}} </b> <br/><br/>
+</h4>
+<p class="subtitle">  
+<strong>Explanation:</strong> {{description}}
+<br/><br/>
+<strong>  Image Credit & Copyright: {{copyright}} </strong> 
+</p>
+</div>
+</section>
+</center>
+</body>
+</html>
